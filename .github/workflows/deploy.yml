@@ -31,8 +31,7 @@ jobs:
       - name: code deploy 배포
         id: deploy
         run: |
-          aws deploy create-deployment \
-            --application-name high-school-lecture \
-            --deployment-config-name CodeDeployDefault.OneAtOnce \
+          aws deploy create-deployment --application-name high-school-lecture \
+            --deployment-config-name CodeDeployDefault.AllAtOnce \
             --deployment-group-name high-school-lecture \ 
-            --github-location repository=pkiop/bssm-aws-react-lecture,commitId=${{ github.sha }}
+            --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
