@@ -24,6 +24,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-2
 
+      - name: aws version 확인
+        run: |
+          aws --version
       - name: code deploy 배포
         id: deploy
         run: |
