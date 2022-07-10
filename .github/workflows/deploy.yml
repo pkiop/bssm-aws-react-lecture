@@ -1,17 +1,9 @@
 # This is a basic workflow to help you get started with Actions
 
-name: gradle CD
+name: deploy
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the dev branch
-on:
-  push:
-    branches: [ dev ]
-  pull_request:
-    branches: [ dev ]
-
-name: deploy
-
 on:
   push:
     branches: [main]
@@ -32,10 +24,10 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-2
 
-      - name: code deploy 배포 
+      - name: code deploy 배포
         id: deploy
         run: |
           aws deploy create-deployment \
             --application-name high-school-lecture \
             --deployment-config-name CodeDeployDefault.OneAtATime \
-            --github-location repository=${{ github.repository}},commitId=${{ github.sha }} 
+            --github-location repository=${{ github.repository}},commitId=${{ github.sha }}
