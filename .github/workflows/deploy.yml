@@ -27,6 +27,7 @@ jobs:
       - name: aws version 확인
         run: |
           aws --version
+
       - name: code deploy 배포
         id: deploy
         run: |
@@ -34,4 +35,4 @@ jobs:
             --application-name high-school-lecture \
             --deployment-config-name CodeDeployDefault.OneAtOnce \
             --deployment-group-name high-school-lecture \ 
-            --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
+            --github-location repository=pkiop/bssm-aws-react-lecture,commitId=${{ github.sha }}
