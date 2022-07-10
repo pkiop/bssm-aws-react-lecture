@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: .
+    destination: /home/ubuntu/
+books:
+  BefoleInstall:
+    - location: pull
+      timeout: 300
+      runas: root
+  BefoleInstall:
+    - location: install 
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: start 
+      timeout: 300
+      runas: root
