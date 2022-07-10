@@ -3,7 +3,7 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/bssm-aws-react-lecture
-books:
+hooks:
   BeforeInstall:
     - location: pull
       timeout: 300
