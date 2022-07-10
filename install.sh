@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /home/ubuntu/
-git pull bmms-aws-react-lecture/server
+cd /home/ubuntu/bmms-aws-react-lecture
+npm install
