@@ -32,6 +32,6 @@ jobs:
         id: deploy
         run: |
           aws deploy create-deployment --application-name high-school-lecture \
-            --deployment-config-name CodeDeployDefault.OnceAtATime \
+            --deployment-config-name CodeDeployDefault.OneAtATime \
             --deployment-group-name high-school-lecture \ 
             --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
