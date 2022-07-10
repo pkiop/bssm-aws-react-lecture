@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: .
-    destination: /home/ubuntu/
+  - source: /
+    destination: /home/ubuntu/bssm-aws-react-lecture
 books:
   BeforeInstall:
     - location: pull
