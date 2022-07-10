@@ -4,15 +4,15 @@ files:
   - source: .
     destination: /home/ubuntu/
 books:
-  BefoleInstall:
+  BeforeInstall:
     - location: pull
       timeout: 300
       runas: root
-  BefoleInstall:
-    - location: install 
+  Install:
+    - location: install
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: start 
+    - location: start
       timeout: 300
       runas: root
