@@ -24,3 +24,5 @@ jobs:
           script: |
             cd bssm-aws-react-lecture
             git pull 
+            pm2 stop index
+            pm2 start index
