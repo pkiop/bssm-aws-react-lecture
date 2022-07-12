@@ -23,6 +23,4 @@ jobs:
           username: ${{ secrets.USER }}
           script: |
             cd bssm-aws-react-lecture/server
-            git pull 
-            pm2 stop index
-            pm2 start index
+            git pull
